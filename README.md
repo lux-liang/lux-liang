@@ -134,6 +134,20 @@ agent = {
 
 ---
 
+### `> snake --eat-contributions`
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lux-liang/lux-liang/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lux-liang/lux-liang/output/github-contribution-grid-snake.svg" />
+  <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/lux-liang/lux-liang/output/github-contribution-grid-snake.svg" />
+</picture>
+
+</div>
+
+---
+
 <div align="center">
 
 > *"The best way to do research is to let your agents do it overnight."*
