@@ -11,7 +11,7 @@
       <img height="180" src="./assets/github-stats.svg" alt="Stars across owned and verified contributor projects">
     </picture>
   </a>
-  <a href="#参与的项目精选">
+  <a href="#contributed-projects-selected">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/project-languages-dark.svg">
       <img height="180" src="./assets/project-languages.svg" alt="Primary languages of verified contributor projects">
@@ -19,22 +19,22 @@
   </a>
 </p>
 
-## 参与的项目（精选）
+## Contributed Projects (Selected)
 
-| 名称 | Star 数 | 项目简介 |
+| Project | Stars | Overview |
 | :--- | :---: | :--- |
-| [node-csv](https://github.com/adaltas/node-csv) | [![Stars](https://img.shields.io/github/stars/adaltas/node-csv?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/adaltas/node-csv/stargazers) | Node.js CSV 工具集，支持数据解析、生成与流式转换。 |
-| [yarr](https://github.com/nkanaev/yarr) | [![Stars](https://img.shields.io/github/stars/nkanaev/yarr?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/nkanaev/yarr/stargazers) | 轻量级自托管 RSS 阅读器，集中订阅与阅读信息源。 |
-| [PgQueuer](https://github.com/janbjorge/pgqueuer) | [![Stars](https://img.shields.io/github/stars/janbjorge/pgqueuer?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/janbjorge/pgqueuer/stargazers) | 基于 PostgreSQL 的 Python 后台任务队列。 |
-| [Floci GCP](https://github.com/floci-io/floci-gcp) | [![Stars](https://img.shields.io/github/stars/floci-io/floci-gcp?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/floci-io/floci-gcp/stargazers) | 轻量级 GCP 本地模拟器，便于云服务开发与测试。 |
-| [Network Doctor](https://github.com/heymaikol/network-doctor) | [![Stars](https://img.shields.io/github/stars/heymaikol/network-doctor?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/heymaikol/network-doctor/stargazers) | 跨平台网络诊断终端工具，统一排查连接、代理与协议问题。 |
-| [MCPProxy](https://github.com/smart-mcp-proxy/mcpproxy-go) | [![Stars](https://img.shields.io/github/stars/smart-mcp-proxy/mcpproxy-go?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/smart-mcp-proxy/mcpproxy-go/stargazers) | 面向 AI Agent 的 MCP 代理，集中管理工具访问。 |
-| [runs-on.dev](https://github.com/zordhalo/runs-on.dev) | [![Stars](https://img.shields.io/github/stars/zordhalo/runs-on.dev?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/zordhalo/runs-on.dev/stargazers) | 为开发者提供免费的 runs-on.dev 子域名。 |
-| [TrenTorch](https://github.com/TrenTorch/TrenTorch) | [![Stars](https://img.shields.io/github/stars/TrenTorch/TrenTorch?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/TrenTorch/TrenTorch/stargazers) | 从基础原理学习机器学习、深度学习与模型推理。 |
+| [node-csv](https://github.com/adaltas/node-csv) | [![Stars](https://img.shields.io/github/stars/adaltas/node-csv?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/adaltas/node-csv/stargazers) | A Node.js toolkit for parsing, generating, and transforming CSV data. |
+| [yarr](https://github.com/nkanaev/yarr) | [![Stars](https://img.shields.io/github/stars/nkanaev/yarr?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/nkanaev/yarr/stargazers) | A lightweight, self-hosted RSS reader for keeping up with your favorite feeds. |
+| [PgQueuer](https://github.com/janbjorge/pgqueuer) | [![Stars](https://img.shields.io/github/stars/janbjorge/pgqueuer?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/janbjorge/pgqueuer/stargazers) | A PostgreSQL-backed task queue for Python background jobs. |
+| [Floci GCP](https://github.com/floci-io/floci-gcp) | [![Stars](https://img.shields.io/github/stars/floci-io/floci-gcp?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/floci-io/floci-gcp/stargazers) | A lightweight local GCP emulator for cloud development and testing. |
+| [Network Doctor](https://github.com/heymaikol/network-doctor) | [![Stars](https://img.shields.io/github/stars/heymaikol/network-doctor?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/heymaikol/network-doctor/stargazers) | A cross-platform terminal toolkit for diagnosing connectivity, proxy, and protocol issues. |
+| [MCPProxy](https://github.com/smart-mcp-proxy/mcpproxy-go) | [![Stars](https://img.shields.io/github/stars/smart-mcp-proxy/mcpproxy-go?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/smart-mcp-proxy/mcpproxy-go/stargazers) | An MCP proxy that centralizes tool discovery and access for AI agents. |
+| [runs-on.dev](https://github.com/zordhalo/runs-on.dev) | [![Stars](https://img.shields.io/github/stars/zordhalo/runs-on.dev?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/zordhalo/runs-on.dev/stargazers) | Free runs-on.dev subdomains for developer projects. |
+| [TrenTorch](https://github.com/TrenTorch/TrenTorch) | [![Stars](https://img.shields.io/github/stars/TrenTorch/TrenTorch?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/TrenTorch/TrenTorch/stargazers) | Machine learning, deep learning, and model inference from first principles. |
 
-## 参与的科研项目
+## Research Projects
 
-| 项目 | 角色 | 研究简介 |
+| Project | Role | Overview |
 | :--- | :---: | :--- |
-| [SWE-Pruner Pro](https://github.com/Ayanami1314/swe-pruner-pro) | **主要贡献者** | 利用编程模型自身的内部表示进行上下文裁剪，降低长程智能体任务的 Token 开销。 [论文](https://arxiv.org/abs/2607.18213) |
-| [SWE-Explore Benchmark](https://github.com/Qiushao-E/SWE-Explore-Bench) | **共同第一作者** | 基于真实解题轨迹，评测编程智能体的仓库探索、代码定位与上下文排序能力。 [论文](https://arxiv.org/abs/2606.07297) |
+| [SWE-Pruner Pro](https://github.com/Ayanami1314/swe-pruner-pro) | **Core Contributor** | Uses coding models’ internal representations to prune context and reduce token costs in long-horizon agent tasks. [Paper](https://arxiv.org/abs/2607.18213) |
+| [SWE-Explore Benchmark](https://github.com/Qiushao-E/SWE-Explore-Bench) | **Co-first Author** | Benchmarks repository exploration, code localization, and context ranking using real coding-agent trajectories. [Paper](https://arxiv.org/abs/2606.07297) |
