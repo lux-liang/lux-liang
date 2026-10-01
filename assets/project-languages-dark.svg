@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="195" viewBox="0 0 330 195" role="img" aria-labelledby="title desc">
+  <title id="title">Project Languages</title>
+  <desc id="desc">Primary languages of the 10 projects listed in this profile: Python 30%, Go 20%, JavaScript 20%, TypeScript 20%, Rust 10%. Each project counts once.</desc>
+  <style>text{font-family:'Segoe UI',Ubuntu,Arial,sans-serif}.label{font-size:12px;fill:#c9d1d9}</style>
+  <rect x=".5" y=".5" width="329" height="194" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <text x="25" y="35" font-size="18" font-weight="600" fill="#f0b4bb">Project Languages</text>
+  <text x="25" y="52" font-size="10.5" fill="#8b949e">Primary language · 10 featured projects</text>
+  <defs><clipPath id="bar"><rect x="25" y="66" width="280" height="8" rx="4"/></clipPath></defs>
+  <g clip-path="url(#bar)">
+  <rect x="25" y="66" width="84" height="8" fill="#3572A5"/>
+  <rect x="109" y="66" width="56" height="8" fill="#00ADD8"/>
+  <rect x="165" y="66" width="56" height="8" fill="#f1e05a"/>
+  <rect x="221" y="66" width="56" height="8" fill="#3178c6"/>
+  <rect x="277" y="66" width="28" height="8" fill="#dea584"/>
+  </g>
+  <circle cx="30" cy="101" r="5" fill="#3572A5"/>
+  <text x="42" y="105" class="label">Python <tspan fill="#8b949e">30%</tspan></text>
+  <circle cx="175" cy="101" r="5" fill="#00ADD8"/>
+  <text x="187" y="105" class="label">Go <tspan fill="#8b949e">20%</tspan></text>
+  <circle cx="30" cy="128" r="5" fill="#f1e05a"/>
+  <text x="42" y="132" class="label">JavaScript <tspan fill="#8b949e">20%</tspan></text>
+  <circle cx="175" cy="128" r="5" fill="#3178c6"/>
+  <text x="187" y="132" class="label">TypeScript <tspan fill="#8b949e">20%</tspan></text>
+  <circle cx="30" cy="155" r="5" fill="#dea584"/>
+  <text x="42" y="159" class="label">Rust <tspan fill="#8b949e">10%</tspan></text>
+</svg>

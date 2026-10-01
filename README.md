@@ -1,27 +1,35 @@
-<div align="center">
+<h1 align="center">Jialiang Liang · lux-liang</h1>
 
-# Jialiang Liang · `lux-liang`
-
-**Open-source systems · LLM infrastructure · research engineering**
-
-<p>
-  <a href="https://github.com/lux-liang?tab=repositories"><img src="https://img.shields.io/badge/Building-open%20source-2ea44f?style=flat-square" alt="Open source"></a>
-  <a href="https://github.com/lux-liang"><img src="https://img.shields.io/github/followers/lux-liang?label=Followers&style=flat-square" alt="GitHub followers"></a>
-  <a href="https://github.com/lux-liang/lux-liang"><img src="https://img.shields.io/badge/Stack-Python%20%7C%20Go%20%7C%20Java%20%7C%20TypeScript-8250df?style=flat-square" alt="Technology stack"></a>
+<p align="center">
+  Open-source systems · LLM infrastructure · Developer tools
 </p>
 
-</div>
+<p align="center">
+  <a href="https://github.com/lux-liang">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=lux-liang&amp;show_icons=true&amp;rank_icon=github&amp;icon_color=f0b4bb&amp;title_color=f0b4bb&amp;text_color=c9d1d9&amp;bg_color=0d1117&amp;border_color=30363d&amp;border_radius=12&amp;disable_animations=true">
+      <img height="180" src="https://github-stats-extended.vercel.app/api?username=lux-liang&amp;show_icons=true&amp;rank_icon=github&amp;icon_color=b4232d&amp;title_color=9f171b&amp;text_color=434343&amp;bg_color=ffffff&amp;border_color=ead5d5&amp;border_radius=12&amp;disable_animations=true" alt="Jialiang Liang's GitHub statistics">
+    </picture>
+  </a>
+  <a href="https://github.com/lux-liang?tab=repositories">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/project-languages-dark.svg">
+      <img height="180" src="./assets/project-languages.svg" alt="Primary languages of the 10 featured projects">
+    </picture>
+  </a>
+</p>
 
-## Open-source engineering
+## 参与的项目
 
-I participate in the development of high-impact open-source software across Python, Go, Java, and JavaScript/TypeScript, with merged contributions now reflected in the upstream contributor histories. My work ranges from preserving negative numeric values in [node-csv](https://github.com/adaltas/node-csv) — a 4.2k+ star CSV library used against large datasets — and restoring Windows release behavior in [yarr](https://github.com/nkanaev/yarr), a 4k+ star RSS reader, to release-metadata validation in [connect-py](https://github.com/connectrpc/connect-py), deterministic HTTP API tests in [mcpproxy-go](https://github.com/smart-mcp-proxy/mcpproxy-go), keyboard navigation in [runs-on.dev](https://github.com/zordhalo/runs-on.dev), S3 pagination in [Taskuary](https://github.com/ldbumble/taskuary), scan-compatible minified builds in [Perch](https://github.com/lakeday-org/perch), stale-highlight cleanup in [Pelton](https://github.com/peltonapp/Pelton), and other focused fixes that improve correctness, portability, and day-to-day developer experience. In compact codebases such as Perch, I have taken a core role in shaping the implementation; across larger ecosystems such as node-csv, yarr, and Connect, I contribute as a key upstream engineer.
-
-## Research
-
-My research focuses on making coding agents more capable, efficient, and measurable. As the **first author of [SWE-Explore](https://github.com/Ayanami1314/swe-explore)**, I work on trajectory-based evaluation of how agents explore large repositories and localize the code that matters. As a **key contributor to [SWE-Pruner Pro](https://github.com/Ayanami1314/swe-pruner-pro)**, I help develop an in-agent context-pruning system that reads signals from the coding model itself to preserve useful tool-response structure while reducing long-horizon context overhead; the project is accompanied by [arXiv:2607.18213](https://arxiv.org/abs/2607.18213). Together, these projects connect empirical agent evaluation with practical systems research for the next generation of software engineering agents.
-
-<div align="center">
-
-### Engineering software that is useful in the wild — and research that moves the field forward.
-
-</div>
+| 名称 | Star 数 | 项目简介 |
+| :--- | :---: | :--- |
+| [Yao](https://github.com/YaoApp/yao) | [![Stars](https://img.shields.io/github/stars/YaoApp/yao?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/YaoApp/yao/stargazers) | 自托管 AI Agent 平台，统一管理智能体、工作空间与任务。 |
+| [MathModelAgent](https://github.com/jihe520/MathModelAgent) | [![Stars](https://img.shields.io/github/stars/jihe520/MathModelAgent?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/jihe520/MathModelAgent/stargazers) | 数学建模智能体，串联问题分析、建模求解与论文生成。 |
+| [node-csv](https://github.com/adaltas/node-csv) | [![Stars](https://img.shields.io/github/stars/adaltas/node-csv?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/adaltas/node-csv/stargazers) | Node.js CSV 工具集，支持数据解析、生成与流式转换。 |
+| [yarr](https://github.com/nkanaev/yarr) | [![Stars](https://img.shields.io/github/stars/nkanaev/yarr?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/nkanaev/yarr/stargazers) | 轻量级自托管 RSS 阅读器，集中订阅与阅读信息源。 |
+| [Open DroneLog](https://github.com/arpanghosh8453/open-dronelog) | [![Stars](https://img.shields.io/github/stars/arpanghosh8453/open-dronelog?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/arpanghosh8453/open-dronelog/stargazers) | 无人机飞行日志分析工具，支持本地管理、轨迹回放与数据可视化。 |
+| [ClaudeCode Portable](https://github.com/techjarves/ClaudeCode-Portable) | [![Stars](https://img.shields.io/github/stars/techjarves/ClaudeCode-Portable?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/techjarves/ClaudeCode-Portable/stargazers) | 便携式 Claude Code 运行环境，支持免安装跨电脑使用。 |
+| [PgQueuer](https://github.com/janbjorge/pgqueuer) | [![Stars](https://img.shields.io/github/stars/janbjorge/pgqueuer?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/janbjorge/pgqueuer/stargazers) | 基于 PostgreSQL 的 Python 后台任务队列。 |
+| [splat-transform](https://github.com/playcanvas/splat-transform) | [![Stars](https://img.shields.io/github/stars/playcanvas/splat-transform?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/playcanvas/splat-transform/stargazers) | 3D Gaussian Splatting 数据处理与格式转换工具。 |
+| [Eventlet](https://github.com/eventlet/eventlet) | [![Stars](https://img.shields.io/github/stars/eventlet/eventlet?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/eventlet/eventlet/stargazers) | Python 并发网络库，以协程简化高并发 I/O 编程。 |
+| [Gausian](https://github.com/gausian-AI/Gausian_native_editor) | [![Stars](https://img.shields.io/github/stars/gausian-AI/Gausian_native_editor?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/gausian-AI/Gausian_native_editor/stargazers) | 基于 Rust 的本地视频编辑器，面向 AI 视频制作。 |
