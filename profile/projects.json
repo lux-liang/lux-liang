@@ -2,6 +2,22 @@
   "username": "lux-liang",
   "name": "Jialiang Liang",
   "featuredCount": 8,
+  "research": [
+    {
+      "repo": "Ayanami1314/swe-pruner-pro",
+      "name": "SWE-Pruner Pro",
+      "role": "主要贡献者",
+      "description": "利用编程模型自身的内部表示进行上下文裁剪，降低长程智能体任务的 Token 开销。",
+      "paper": "https://arxiv.org/abs/2607.18213"
+    },
+    {
+      "repo": "Qiushao-E/SWE-Explore-Bench",
+      "name": "SWE-Explore Benchmark",
+      "role": "共同第一作者",
+      "description": "基于真实解题轨迹，评测编程智能体的仓库探索、代码定位与上下文排序能力。",
+      "paper": "https://arxiv.org/abs/2606.07297"
+    }
+  ],
   "candidates": [
     {
       "repo": "adaltas/node-csv",

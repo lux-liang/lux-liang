@@ -31,3 +31,10 @@
 | [MCPProxy](https://github.com/smart-mcp-proxy/mcpproxy-go) | [![Stars](https://img.shields.io/github/stars/smart-mcp-proxy/mcpproxy-go?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/smart-mcp-proxy/mcpproxy-go/stargazers) | 面向 AI Agent 的 MCP 代理，集中管理工具访问。 |
 | [runs-on.dev](https://github.com/zordhalo/runs-on.dev) | [![Stars](https://img.shields.io/github/stars/zordhalo/runs-on.dev?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/zordhalo/runs-on.dev/stargazers) | 为开发者提供免费的 runs-on.dev 子域名。 |
 | [TrenTorch](https://github.com/TrenTorch/TrenTorch) | [![Stars](https://img.shields.io/github/stars/TrenTorch/TrenTorch?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/TrenTorch/TrenTorch/stargazers) | 从基础原理学习机器学习、深度学习与模型推理。 |
+
+## 参与的科研项目
+
+| 项目 | 角色 | 研究简介 |
+| :--- | :---: | :--- |
+| [SWE-Pruner Pro](https://github.com/Ayanami1314/swe-pruner-pro) | **主要贡献者** | 利用编程模型自身的内部表示进行上下文裁剪，降低长程智能体任务的 Token 开销。 [论文](https://arxiv.org/abs/2607.18213) |
+| [SWE-Explore Benchmark](https://github.com/Qiushao-E/SWE-Explore-Bench) | **共同第一作者** | 基于真实解题轨迹，评测编程智能体的仓库探索、代码定位与上下文排序能力。 [论文](https://arxiv.org/abs/2606.07297) |
