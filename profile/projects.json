@@ -1,0 +1,132 @@
+{
+  "username": "lux-liang",
+  "name": "Jialiang Liang",
+  "minimumStars": 1000,
+  "candidates": [
+    {
+      "repo": "adaltas/node-csv",
+      "name": "node-csv",
+      "description": "Node.js CSV 工具集，支持数据解析、生成与流式转换。"
+    },
+    {
+      "repo": "nkanaev/yarr",
+      "name": "yarr",
+      "description": "轻量级自托管 RSS 阅读器，集中订阅与阅读信息源。"
+    },
+    {
+      "repo": "janbjorge/pgqueuer",
+      "name": "PgQueuer",
+      "description": "基于 PostgreSQL 的 Python 后台任务队列。"
+    },
+    {
+      "repo": "floci-io/floci-gcp",
+      "name": "Floci GCP",
+      "description": "轻量级 GCP 本地模拟器，便于云服务开发与测试。"
+    },
+    {
+      "repo": "heymaikol/network-doctor",
+      "name": "Network Doctor",
+      "description": "跨平台网络诊断终端工具，统一排查连接、代理与协议问题。"
+    },
+    {
+      "repo": "smart-mcp-proxy/mcpproxy-go",
+      "name": "MCPProxy",
+      "description": "面向 AI Agent 的 MCP 代理，集中管理工具访问。"
+    },
+    {
+      "repo": "zordhalo/runs-on.dev",
+      "name": "runs-on.dev",
+      "description": "为开发者提供免费的 runs-on.dev 子域名。"
+    },
+    {
+      "repo": "TrenTorch/TrenTorch",
+      "name": "TrenTorch",
+      "description": "从基础原理学习机器学习、深度学习与模型推理。"
+    },
+    {
+      "repo": "lakeday-org/perch",
+      "name": "Perch",
+      "description": "基于决策模型的语义代码检查工具。"
+    },
+    {
+      "repo": "sorokin-vladimir/tele",
+      "name": "Tele",
+      "description": "键盘驱动的 Telegram 终端客户端。"
+    },
+    {
+      "repo": "peltonapp/Pelton",
+      "name": "Pelton",
+      "description": "注重隐私的跨平台开源邮件客户端。"
+    },
+    {
+      "repo": "connectrpc/connect-py",
+      "name": "Connect Python",
+      "description": "Connect 协议的 Python 实现，提供基于 Protobuf 的 RPC 通信。"
+    },
+    {
+      "repo": "nunobrum/spicelib",
+      "name": "spicelib",
+      "description": "连接 Python 与 SPICE 电路仿真器的工具库。"
+    },
+    {
+      "repo": "xiajiajun516/dsh-config-manager",
+      "name": "DSH Config Manager",
+      "description": "DeepSeek Harness 配置的备份、恢复与迁移工具。"
+    },
+    {
+      "repo": "gopherium/gophenberg",
+      "name": "Gophenberg",
+      "description": "采用 Go 后端、React 管理界面的可扩展内容管理系统。"
+    },
+    {
+      "repo": "ldbumble/taskuary",
+      "name": "Taskuary",
+      "description": "本地优先的 AI 任务中心，整合消息来源与编程智能体。"
+    },
+    {
+      "repo": "YaoApp/yao",
+      "name": "Yao",
+      "description": "自托管 AI Agent 平台，统一管理智能体、工作空间与任务。"
+    },
+    {
+      "repo": "jihe520/MathModelAgent",
+      "name": "MathModelAgent",
+      "description": "数学建模智能体，串联问题分析、建模求解与论文生成。"
+    },
+    {
+      "repo": "arpanghosh8453/open-dronelog",
+      "name": "Open DroneLog",
+      "description": "无人机飞行日志分析工具，支持本地管理、轨迹回放与数据可视化。"
+    },
+    {
+      "repo": "techjarves/ClaudeCode-Portable",
+      "name": "ClaudeCode Portable",
+      "description": "便携式 Claude Code 运行环境，支持免安装跨电脑使用。"
+    },
+    {
+      "repo": "playcanvas/splat-transform",
+      "name": "splat-transform",
+      "description": "3D Gaussian Splatting 数据处理与格式转换工具。"
+    },
+    {
+      "repo": "eventlet/eventlet",
+      "name": "Eventlet",
+      "description": "Python 并发网络库，以协程简化高并发 I/O 编程。"
+    },
+    {
+      "repo": "gausian-AI/Gausian_native_editor",
+      "name": "Gausian",
+      "description": "基于 Rust 的本地视频编辑器，面向 AI 视频制作。"
+    },
+    {
+      "repo": "JarryShaw/PyPCAPKit",
+      "name": "PyPCAPKit",
+      "description": "Python 网络数据包解析与分析库。"
+    },
+    {
+      "repo": "FasterXML/jackson-modules-java8",
+      "name": "Jackson Java 8 Modules",
+      "description": "为 Jackson 提供 Java 8 日期时间、Optional 与参数名支持。"
+    }
+  ]
+}
