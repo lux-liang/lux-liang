@@ -154,17 +154,17 @@ function readme(data) {
     '<p align="center">',
     '  <a href="https://github.com/' + config.username + '">',
     picture('github-stats', 'Stars across owned and verified contributor projects'), '  </a>',
-    '  <a href="#参与的项目精选">',
+    '  <a href="#contributed-projects-selected">',
     picture('project-languages', 'Primary languages of verified contributor projects'), '  </a>',
     '</p>', '',
-    '## 参与的项目（精选）', '',
-    '| 名称 | Star 数 | 项目简介 |', '| :--- | :---: | :--- |',
+    '## Contributed Projects (Selected)', '',
+    '| Project | Stars | Overview |', '| :--- | :---: | :--- |',
     ...data.featured.map(row =>
       '| [' + row.name + '](https://github.com/' + row.repo + ') | [![Stars](https://img.shields.io/github/stars/' + row.repo +
       '?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/' + row.repo + '/stargazers) | ' + row.description + ' |'),
-    '', '## 参与的科研项目', '',
-    '| 项目 | 角色 | 研究简介 |', '| :--- | :---: | :--- |',
-    ...config.research.map(row => '| [' + row.name + '](https://github.com/' + row.repo + ') | **' + row.role + '** | ' + row.description + ' [论文](' + row.paper + ') |'),
+    '', '## Research Projects', '',
+    '| Project | Role | Overview |', '| :--- | :---: | :--- |',
+    ...config.research.map(row => '| [' + row.name + '](https://github.com/' + row.repo + ') | **' + row.role + '** | ' + row.description + ' [Paper](' + row.paper + ') |'),
     ''
   ].join('\n');
 }
