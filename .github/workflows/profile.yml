@@ -24,6 +24,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: main
       - name: Verify Contributors and regenerate profile
         run: node scripts/update-profile.mjs
         env:
