@@ -94,12 +94,12 @@ function shell(width, title, description, body, dark) {
 
 function statsCard(data, dark) {
   return shell(467, config.name + "'s GitHub Stats",
-    'Total Project Stars: ' + data.stars + '. Sum of public owned and verified contributor repositories, each repository counted once. Contributed projects: ' + data.contributed.length + '. Contributor commits: ' + data.commits + '. Primary languages: ' + data.languages.length + '.',
+    'Total Project Stars: ' + data.stars + '. Sum of public owned and verified contributor repositories, each repository counted once. Contributed projects: ' + data.contributed.length + '. Total Commits: ' + data.allCommits.total + ', including private repositories, all accessible branches, deduplicated by SHA; verified on ' + data.allCommits.updatedAt.slice(0,10) + '. Primary languages: ' + data.languages.length + '.',
     palette => {
       const rows = [
         ['Total Project Stars', number(data.stars)],
         ['Contributed Projects', data.contributed.length],
-        ['Contributor Commits', data.commits],
+        ['Total Commits (incl. private)', number(data.allCommits.total)],
         ['Project Languages', data.languages.length]
       ];
       return [
@@ -162,6 +162,9 @@ function readme(data) {
     ...data.featured.map(row =>
       '| [' + row.name + '](https://github.com/' + row.repo + ') | [![Stars](https://img.shields.io/github/stars/' + row.repo +
       '?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/' + row.repo + '/stargazers) | ' + row.description + ' |'),
+    '', '## 参与的科研项目', '',
+    '| 项目 | 角色 | 研究简介 |', '| :--- | :---: | :--- |',
+    ...config.research.map(row => '| [' + row.name + '](https://github.com/' + row.repo + ') | **' + row.role + '** | ' + row.description + ' [论文](' + row.paper + ') |'),
     ''
   ].join('\n');
 }
@@ -170,6 +173,8 @@ async function main() {
   const snapshot = process.argv.indexOf('--snapshot');
   const rows = snapshot < 0 ? await collect() : JSON.parse(await readFile(process.argv[snapshot + 1], 'utf8')).projects;
   const data = selectProjects(rows, config);
+  data.allCommits = JSON.parse(await readFile(path.join(root, 'profile/commits.json'), 'utf8'));
+  if (data.allCommits.username !== config.username || !Number.isSafeInteger(data.allCommits.total) || data.allCommits.total < 0) throw new Error('Invalid all-commits snapshot');
   if (!data.contributed.length || !data.featured.length) throw new Error('No confirmed projects; keeping previous profile');
   const files = new Map([['README.md', readme(data)]]);
   for (const dark of [false, true]) {

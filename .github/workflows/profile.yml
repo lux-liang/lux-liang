@@ -10,6 +10,8 @@ on:
       - '.github/workflows/profile.yml'
       - 'profile/projects.json'
       - 'scripts/update-profile.mjs'
+      - 'scripts/refresh-commits.mjs'
+      - 'profile/commits.json'
 
 permissions:
   contents: write
@@ -26,13 +28,17 @@ jobs:
       - uses: actions/checkout@v6
         with:
           ref: main
+      - name: Refresh all commits when private statistics access is configured
+        run: node scripts/refresh-commits.mjs
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
       - name: Verify Contributors and regenerate profile
         run: node scripts/update-profile.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish refreshed profile
         run: |
-          git add README.md assets/github-stats*.svg assets/project-languages*.svg
+          git add README.md profile/commits.json assets/github-stats*.svg assets/project-languages*.svg
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
