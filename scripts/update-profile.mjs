@@ -72,7 +72,7 @@ export function selectProjects(rows, settings) {
   const languages = new Map();
   for (const row of contributed) if (row.language) languages.set(row.language, (languages.get(row.language) || 0) + 1);
   return {
-    contributed, featured: contributed.filter(row => row.stars >= settings.minimumStars),
+    contributed, featured: contributed.slice(0, settings.featuredCount),
     stars: [...starRepos.values()].reduce((sum, row) => sum + row.stars, 0),
     commits: contributed.reduce((sum, row) => sum + row.commits, 0),
     languages: [...languages].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
@@ -154,10 +154,10 @@ function readme(data) {
     '<p align="center">',
     '  <a href="https://github.com/' + config.username + '">',
     picture('github-stats', 'Stars across owned and verified contributor projects'), '  </a>',
-    '  <a href="#参与的项目">',
+    '  <a href="#参与的项目精选">',
     picture('project-languages', 'Primary languages of verified contributor projects'), '  </a>',
     '</p>', '',
-    '## 参与的项目', '',
+    '## 参与的项目（精选）', '',
     '| 名称 | Star 数 | 项目简介 |', '| :--- | :---: | :--- |',
     ...data.featured.map(row =>
       '| [' + row.name + '](https://github.com/' + row.repo + ') | [![Stars](https://img.shields.io/github/stars/' + row.repo +
