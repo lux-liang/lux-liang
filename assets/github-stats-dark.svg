@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="467" height="195" viewBox="0 0 467 195" role="img" aria-labelledby="title desc">
-<title id="title">Jialiang Liang's GitHub Stats</title><desc id="desc">Total Project Stars: 13433. Sum of public owned and verified contributor repositories, each repository counted once. Contributed projects: 16. Total Commits: 1670, including private repositories, all accessible branches, deduplicated by SHA; verified on 2026-10-01. Primary languages: 5.</desc>
+<title id="title">Jialiang Liang's GitHub Stats</title><desc id="desc">Total Project Stars: 13484. Sum of public owned and verified contributor repositories, each repository counted once. Contributed projects: 16. Total Commits: 1670, including private repositories, all accessible branches, deduplicated by SHA; verified on 2026-10-01. Primary languages: 5.</desc>
 <style>text{font-family:"Segoe UI",Ubuntu,Arial,sans-serif}.title{font-size:18px;font-weight:600;fill:#f0b4bb}.label{font-size:12px;fill:#c9d1d9}.muted{font-size:10.5px;fill:#8b949e}</style>
 <rect x=".5" y=".5" width="466" height="194" rx="12" fill="#0d1117" stroke="#30363d"/>
 <text x="25" y="35" class="title">Jialiang Liang's GitHub Stats</text>
 <text x="25" y="53" class="muted">Stars across owned &amp; contributed public repositories</text>
-<circle cx="30" cy="78" r="3" fill="#f0b4bb"/><text x="42" y="82" class="label" font-weight="600">Total Project Stars</text><text x="266" y="82" class="label" font-weight="700">13,433</text>
+<circle cx="30" cy="78" r="3" fill="#f0b4bb"/><text x="42" y="82" class="label" font-weight="600">Total Project Stars</text><text x="266" y="82" class="label" font-weight="700">13,484</text>
 <circle cx="30" cy="107" r="3" fill="#f0b4bb"/><text x="42" y="111" class="label" font-weight="600">Contributed Projects</text><text x="266" y="111" class="label" font-weight="700">16</text>
 <circle cx="30" cy="136" r="3" fill="#f0b4bb"/><text x="42" y="140" class="label" font-weight="600">Total Commits (incl. private)</text><text x="266" y="140" class="label" font-weight="700">1,670</text>
 <circle cx="30" cy="165" r="3" fill="#f0b4bb"/><text x="42" y="169" class="label" font-weight="600">Project Languages</text><text x="266" y="169" class="label" font-weight="700">5</text>
