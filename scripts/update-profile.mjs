@@ -82,6 +82,12 @@ export function selectProjects(rows, settings) {
     key(row.owner) !== key(settings.username) && candidates.has(key(row.repo))
   ).map(row => [key(row.canonical || row.repo), {...row, ...candidates.get(key(row.repo)), repo: row.canonical || row.repo}])).values()]
     .sort((a, b) => b.stars - a.stars || a.repo.localeCompare(b.repo));
+  const topContributors = contributed.filter(row =>
+    Number.isInteger(row.contributorRank) && row.contributorRank >= 1 && row.contributorRank <= settings.topContributorRank
+  );
+  const topContributorRepos = new Set(topContributors.map(row => key(row.repo)));
+  const additionalProjects = contributed.filter(row => !topContributorRepos.has(key(row.repo)))
+    .slice(0, settings.additionalHighStarProjects);
   const starCandidates = new Set([...settings.candidates, ...(settings.research || [])].map(spec => key(spec.repo)));
   const starRepos = new Map(rows.filter(row =>
     !row.private && !row.fork &&
@@ -91,7 +97,7 @@ export function selectProjects(rows, settings) {
   const languages = new Map();
   for (const row of contributed) if (row.language) languages.set(row.language, (languages.get(row.language) || 0) + 1);
   return {
-    contributed, featured: contributed.slice(0, settings.featuredCount),
+    contributed, featured: [...topContributors, ...additionalProjects],
     starProjects: [...starRepos.values()],
     stars: [...starRepos.values()].reduce((sum, row) => sum + row.stars, 0),
     commits: contributed.reduce((sum, row) => sum + row.commits, 0),
@@ -179,6 +185,7 @@ function readme(data) {
     '</p>', '',
     'Star totals include only public, non-fork projects where I appear among the top five contributors, ranked by commits.', '',
     '## Contributed Projects (Selected)', '',
+    'Projects where I rank among the top ' + config.topContributorRank + ' contributors, followed by ' + config.additionalHighStarProjects + ' additional projects with the most stars.', '',
     '| Project | Stars | Overview |', '| :--- | :---: | :--- |',
     ...data.featured.map(row =>
       '| [' + row.name + '](https://github.com/' + row.repo + ') | [![Stars](https://img.shields.io/github/stars/' + row.repo +

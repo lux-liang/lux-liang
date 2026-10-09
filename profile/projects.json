@@ -1,7 +1,8 @@
 {
   "username": "lux-liang",
   "name": "Jialiang Liang",
-  "featuredCount": 8,
+  "topContributorRank": 5,
+  "additionalHighStarProjects": 2,
   "research": [
     {
       "repo": "Ayanami1314/swe-pruner-pro",
@@ -107,7 +108,7 @@
     {
       "repo": "gopherium/gophenberg",
       "name": "Gophenberg",
-      "description": "An extensible content management system with a Go backend and React admin interface."
+      "description": "An extensible content management system with a Go backend and React admin interface. [Merged PR](https://github.com/gopherium/gophenberg/pull/350)"
     },
     {
       "repo": "ldbumble/taskuary",
