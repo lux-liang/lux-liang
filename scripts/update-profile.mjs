@@ -35,28 +35,43 @@ async function pages(endpoint) {
 async function collect() {
   if (!process.env.GITHUB_TOKEN) throw new Error('GITHUB_TOKEN is required');
   const rows = [];
+  const projects = [...new Map([...config.candidates, ...config.research].map(spec => [key(spec.repo), spec])).values()];
   let cursor = 0;
   async function worker() {
-    while (cursor < config.candidates.length) {
-      const spec = config.candidates[cursor++];
+    while (cursor < projects.length) {
+      const spec = projects[cursor++];
       const meta = await request('repos/' + spec.repo);
       if (meta.private || meta.fork) continue;
       const contributors = await pages('repos/' + meta.full_name + '/contributors');
-      const contributor = contributors.find(person => key(person.login || '') === key(config.username));
+      const contributorIndex = contributors.findIndex(person => key(person.login || '') === key(config.username));
+      const contributor = contributors[contributorIndex];
       rows.push({
         repo: spec.repo, canonical: meta.full_name, owner: meta.owner.login,
         stars: meta.stargazers_count, language: meta.language, private: meta.private, fork: meta.fork,
         confirmed: Boolean(contributor && contributor.contributions > 0),
-        commits: contributor?.contributions || 0
+        commits: contributor?.contributions || 0,
+        contributorRank: contributorIndex < 0 ? null : contributorIndex + 1
       });
     }
   }
   await Promise.all(Array.from({length: 4}, worker));
-  const owned = await pages('users/' + config.username + '/repos?type=owner');
-  rows.push(...owned.filter(repo => !repo.private && !repo.fork).map(repo => ({
-    repo: repo.full_name, canonical: repo.full_name, owner: repo.owner.login,
-    stars: repo.stargazers_count, language: repo.language, private: repo.private, fork: repo.fork
-  })));
+  const owned = (await pages('users/' + config.username + '/repos?type=owner')).filter(repo => !repo.private && !repo.fork);
+  let ownedCursor = 0;
+  async function ownedWorker() {
+    while (ownedCursor < owned.length) {
+      const repo = owned[ownedCursor++];
+      const contributors = await request('repos/' + repo.full_name + '/contributors?per_page=5');
+      if (!Array.isArray(contributors)) throw new Error('Expected contributors for ' + repo.full_name);
+      const contributorIndex = contributors.findIndex(person => key(person.login || '') === key(config.username));
+      rows.push({
+        repo: repo.full_name, canonical: repo.full_name, owner: repo.owner.login,
+        stars: repo.stargazers_count, language: repo.language, private: repo.private, fork: repo.fork,
+        commits: contributors[contributorIndex]?.contributions || 0,
+        contributorRank: contributorIndex < 0 ? null : contributorIndex + 1
+      });
+    }
+  }
+  await Promise.all(Array.from({length: 4}, ownedWorker));
   return rows;
 }
 
@@ -67,12 +82,17 @@ export function selectProjects(rows, settings) {
     key(row.owner) !== key(settings.username) && candidates.has(key(row.repo))
   ).map(row => [key(row.canonical || row.repo), {...row, ...candidates.get(key(row.repo)), repo: row.canonical || row.repo}])).values()]
     .sort((a, b) => b.stars - a.stars || a.repo.localeCompare(b.repo));
-  const owned = rows.filter(row => !row.private && !row.fork && key(row.owner) === key(settings.username));
-  const starRepos = new Map([...owned, ...contributed].map(row => [key(row.canonical || row.repo), row]));
+  const starCandidates = new Set([...settings.candidates, ...(settings.research || [])].map(spec => key(spec.repo)));
+  const starRepos = new Map(rows.filter(row =>
+    !row.private && !row.fork &&
+    (key(row.owner) === key(settings.username) || (row.confirmed === true && starCandidates.has(key(row.repo)))) &&
+    row.commits > 0 && Number.isInteger(row.contributorRank) && row.contributorRank >= 1 && row.contributorRank <= 5
+  ).map(row => [key(row.canonical || row.repo), row]));
   const languages = new Map();
   for (const row of contributed) if (row.language) languages.set(row.language, (languages.get(row.language) || 0) + 1);
   return {
     contributed, featured: contributed.slice(0, settings.featuredCount),
+    starProjects: [...starRepos.values()],
     stars: [...starRepos.values()].reduce((sum, row) => sum + row.stars, 0),
     commits: contributed.reduce((sum, row) => sum + row.commits, 0),
     languages: [...languages].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
@@ -94,17 +114,17 @@ function shell(width, title, description, body, dark) {
 
 function statsCard(data, dark) {
   return shell(467, config.name + "'s GitHub Stats",
-    'Total Project Stars: ' + data.stars + '. Sum of public owned and verified contributor repositories, each repository counted once. Contributed projects: ' + data.contributed.length + '. Total Commits: ' + data.allCommits.total + ', including private repositories, all accessible branches, deduplicated by SHA; verified on ' + data.allCommits.updatedAt.slice(0,10) + '. Primary languages: ' + data.languages.length + '.',
+    'Top-5 Project Stars: ' + data.stars + '. Sum of public, non-fork repositories where ' + config.username + ' appears among the first five contributors ranked by commits, each repository counted once. Contributed projects: ' + data.contributed.length + '. Total Commits: ' + data.allCommits.total + ', including private repositories, all accessible branches, deduplicated by SHA; verified on ' + data.allCommits.updatedAt.slice(0,10) + '. Primary languages: ' + data.languages.length + '.',
     palette => {
       const rows = [
-        ['Total Project Stars', number(data.stars)],
+        ['Top-5 Project Stars', number(data.stars)],
         ['Contributed Projects', data.contributed.length],
         ['Total Commits (incl. private)', number(data.allCommits.total)],
         ['Project Languages', data.languages.length]
       ];
       return [
         '<text x="25" y="35" class="title">' + escape(config.name + "'s GitHub Stats") + '</text>',
-        '<text x="25" y="53" class="muted">Stars across owned &amp; contributed public repositories</text>',
+        '<text x="25" y="53" class="muted">Stars from projects where I am a top-5 contributor</text>',
         ...rows.map(([label, value], i) =>
           '<circle cx="30" cy="' + (78 + i * 29) + '" r="3" fill="' + palette.title + '"/>' +
           '<text x="42" y="' + (82 + i * 29) + '" class="label" font-weight="600">' + label + '</text>' +
@@ -153,10 +173,11 @@ function readme(data) {
     '<p align="center">', '  Open-source systems · LLM infrastructure · Developer tools', '</p>', '',
     '<p align="center">',
     '  <a href="https://github.com/' + config.username + '">',
-    picture('github-stats', 'Stars across owned and verified contributor projects'), '  </a>',
+    picture('github-stats', 'Stars from projects where I am a top-five contributor'), '  </a>',
     '  <a href="#contributed-projects-selected">',
     picture('project-languages', 'Primary languages of verified contributor projects'), '  </a>',
     '</p>', '',
+    'Star totals include only public, non-fork projects where I appear among the top five contributors, ranked by commits.', '',
     '## Contributed Projects (Selected)', '',
     '| Project | Stars | Overview |', '| :--- | :---: | :--- |',
     ...data.featured.map(row =>
@@ -184,6 +205,6 @@ async function main() {
   }
   await mkdir(path.join(root, 'assets'), {recursive: true});
   for (const [file, contents] of files) await writeFile(path.join(root, file), contents);
-  console.log(JSON.stringify({stars:data.stars, confirmedProjects:data.contributed.length, featured:data.featured.map(row => row.repo), commits:data.commits}));
+  console.log(JSON.stringify({stars:data.stars, starProjects:data.starProjects.map(row => ({repo:row.canonical || row.repo, rank:row.contributorRank, stars:row.stars})), confirmedProjects:data.contributed.length, featured:data.featured.map(row => row.repo), commits:data.commits}));
 }
 if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) await main();

@@ -8,7 +8,7 @@
   <a href="https://github.com/lux-liang">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/github-stats-dark.svg">
-      <img height="180" src="./assets/github-stats.svg" alt="Stars across owned and verified contributor projects">
+      <img height="180" src="./assets/github-stats.svg" alt="Stars from projects where I am a top-five contributor">
     </picture>
   </a>
   <a href="#contributed-projects-selected">
@@ -18,6 +18,8 @@
     </picture>
   </a>
 </p>
+
+Star totals include only public, non-fork projects where I appear among the top five contributors, ranked by commits.
 
 ## Contributed Projects (Selected)
 
