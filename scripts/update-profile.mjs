@@ -185,7 +185,6 @@ function readme(data) {
     '</p>', '',
     'Star totals include only public, non-fork projects where I appear among the top five contributors, ranked by commits.', '',
     '## Contributed Projects (Selected)', '',
-    'Projects where I rank among the top ' + config.topContributorRank + ' contributors, followed by ' + config.additionalHighStarProjects + ' additional projects with the most stars.', '',
     '| Project | Stars | Overview |', '| :--- | :---: | :--- |',
     ...data.featured.map(row =>
       '| [' + row.name + '](https://github.com/' + row.repo + ') | [![Stars](https://img.shields.io/github/stars/' + row.repo +

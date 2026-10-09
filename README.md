@@ -23,16 +23,14 @@ Star totals include only public, non-fork projects where I appear among the top 
 
 ## Contributed Projects (Selected)
 
-Projects where I rank among the top 5 contributors, followed by 2 additional projects with the most stars.
-
 | Project | Stars | Overview |
 | :--- | :---: | :--- |
-| [PgQueuer](https://github.com/janbjorge/pgqueuer) | [![Stars](https://img.shields.io/github/stars/janbjorge/pgqueuer?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/janbjorge/pgqueuer/stargazers) | A PostgreSQL-backed task queue for Python background jobs. [Merged PR](https://github.com/janbjorge/pgqueuer/pull/935) |
+| [PgQueuer](https://github.com/janbjorge/pgqueuer) | [![Stars](https://img.shields.io/github/stars/janbjorge/pgqueuer?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/janbjorge/pgqueuer/stargazers) | A PostgreSQL-backed task queue for Python background jobs. |
 | [Perch](https://github.com/lakeday-org/perch) | [![Stars](https://img.shields.io/github/stars/lakeday-org/perch?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/lakeday-org/perch/stargazers) | Semantic code analysis powered by decision models. |
-| [Gophenberg](https://github.com/gopherium/gophenberg) | [![Stars](https://img.shields.io/github/stars/gopherium/gophenberg?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/gopherium/gophenberg/stargazers) | An extensible content management system with a Go backend and React admin interface. [Merged PR](https://github.com/gopherium/gophenberg/pull/350) |
+| [Gophenberg](https://github.com/gopherium/gophenberg) | [![Stars](https://img.shields.io/github/stars/gopherium/gophenberg?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/gopherium/gophenberg/stargazers) | An extensible content management system with a Go backend and React admin interface. |
 | [DSH Config Manager](https://github.com/xiajiajun516/dsh-config-manager) | [![Stars](https://img.shields.io/github/stars/xiajiajun516/dsh-config-manager?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/xiajiajun516/dsh-config-manager/stargazers) | Backup, restore, and migration tools for DeepSeek Harness configurations. |
-| [CrewAI](https://github.com/crewAIInc/crewAI) | [![Stars](https://img.shields.io/github/stars/crewAIInc/crewAI?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/crewAIInc/crewAI/stargazers) | A framework for orchestrating teams of AI agents. [Merged PR](https://github.com/crewAIInc/crewAI/pull/7951) |
-| [Agno](https://github.com/agno-agi/agno) | [![Stars](https://img.shields.io/github/stars/agno-agi/agno?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/agno-agi/agno/stargazers) | A Python framework for building agents, teams, and agent workflows. [Merged PR](https://github.com/agno-agi/agno/pull/10878) |
+| [CrewAI](https://github.com/crewAIInc/crewAI) | [![Stars](https://img.shields.io/github/stars/crewAIInc/crewAI?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/crewAIInc/crewAI/stargazers) | A framework for orchestrating teams of AI agents. |
+| [Agno](https://github.com/agno-agi/agno) | [![Stars](https://img.shields.io/github/stars/agno-agi/agno?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/agno-agi/agno/stargazers) | A Python framework for building agents, teams, and agent workflows. |
 
 ## Research Projects
 
