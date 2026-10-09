@@ -37,7 +37,7 @@
     {
       "repo": "adaltas/node-csv",
       "name": "node-csv",
-      "description": "A Node.js toolkit for parsing, generating, and transforming CSV data."
+      "description": "A Node.js toolkit for parsing, generating, and transforming CSV data. [Merged PR](https://github.com/adaltas/node-csv/pull/523)"
     },
     {
       "repo": "nkanaev/yarr",
