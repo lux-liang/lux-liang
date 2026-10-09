@@ -20,6 +20,21 @@
   ],
   "candidates": [
     {
+      "repo": "agno-agi/agno",
+      "name": "Agno",
+      "description": "A Python framework for building agents, teams, and agent workflows. [Merged PR](https://github.com/agno-agi/agno/pull/10878)"
+    },
+    {
+      "repo": "crewAIInc/crewAI",
+      "name": "CrewAI",
+      "description": "A framework for orchestrating teams of AI agents. [Merged PR](https://github.com/crewAIInc/crewAI/pull/7951)"
+    },
+    {
+      "repo": "opensandbox-group/OpenSandbox",
+      "name": "OpenSandbox",
+      "description": "A sandbox platform for running AI agents and code in isolated environments. [Merged PR](https://github.com/opensandbox-group/OpenSandbox/pull/2125)"
+    },
+    {
       "repo": "adaltas/node-csv",
       "name": "node-csv",
       "description": "A Node.js toolkit for parsing, generating, and transforming CSV data."
@@ -32,17 +47,17 @@
     {
       "repo": "janbjorge/pgqueuer",
       "name": "PgQueuer",
-      "description": "A PostgreSQL-backed task queue for Python background jobs."
+      "description": "A PostgreSQL-backed task queue for Python background jobs. [Merged PR](https://github.com/janbjorge/pgqueuer/pull/935)"
     },
     {
       "repo": "floci-io/floci-gcp",
       "name": "Floci GCP",
-      "description": "A lightweight local GCP emulator for cloud development and testing."
+      "description": "A lightweight local GCP emulator for cloud development and testing. [Merged PR](https://github.com/floci-io/floci-gcp/pull/361)"
     },
     {
       "repo": "heymaikol/network-doctor",
       "name": "Network Doctor",
-      "description": "A cross-platform terminal toolkit for diagnosing connectivity, proxy, and protocol issues."
+      "description": "A cross-platform terminal toolkit for diagnosing connectivity, proxy, and protocol issues. [Merged PR](https://github.com/heymaikol/network-doctor/pull/287)"
     },
     {
       "repo": "smart-mcp-proxy/mcpproxy-go",
@@ -97,7 +112,7 @@
     {
       "repo": "ldbumble/taskuary",
       "name": "Taskuary",
-      "description": "A local-first AI task hub connecting messaging sources and coding agents."
+      "description": "A local-first AI task hub connecting messaging sources and coding agents. [Merged PR](https://github.com/ldbumble/taskuary/pull/131)"
     },
     {
       "repo": "YaoApp/yao",
