@@ -19,8 +19,6 @@
   </a>
 </p>
 
-Star totals include only public, non-fork projects where I appear among the top five contributors, ranked by commits.
-
 ## Contributed Projects (Selected)
 
 | Project | Stars | Overview |

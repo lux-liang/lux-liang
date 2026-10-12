@@ -183,7 +183,6 @@ function readme(data) {
     '  <a href="#contributed-projects-selected">',
     picture('project-languages', 'Primary languages of verified contributor projects'), '  </a>',
     '</p>', '',
-    'Star totals include only public, non-fork projects where I appear among the top five contributors, ranked by commits.', '',
     '## Contributed Projects (Selected)', '',
     '| Project | Stars | Overview |', '| :--- | :---: | :--- |',
     ...data.featured.map(row =>
