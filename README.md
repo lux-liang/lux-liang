@@ -25,7 +25,6 @@
 | :--- | :---: | :--- |
 | [PgQueuer](https://github.com/janbjorge/pgqueuer) | [![Stars](https://img.shields.io/github/stars/janbjorge/pgqueuer?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/janbjorge/pgqueuer/stargazers) | A PostgreSQL-backed task queue for Python background jobs. |
 | [Perch](https://github.com/lakeday-org/perch) | [![Stars](https://img.shields.io/github/stars/lakeday-org/perch?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/lakeday-org/perch/stargazers) | Semantic code analysis powered by decision models. |
-| [DSH Config Manager](https://github.com/xiajiajun516/dsh-config-manager) | [![Stars](https://img.shields.io/github/stars/xiajiajun516/dsh-config-manager?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/xiajiajun516/dsh-config-manager/stargazers) | Backup, restore, and migration tools for DeepSeek Harness configurations. |
 | [CrewAI](https://github.com/crewAIInc/crewAI) | [![Stars](https://img.shields.io/github/stars/crewAIInc/crewAI?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/crewAIInc/crewAI/stargazers) | A framework for orchestrating teams of AI agents. |
 | [Agno](https://github.com/agno-agi/agno) | [![Stars](https://img.shields.io/github/stars/agno-agi/agno?style=flat-square&label=%E2%98%85&color=9f171b&labelColor=f3eeee)](https://github.com/agno-agi/agno/stargazers) | A Python framework for building agents, teams, and agent workflows. |
 
